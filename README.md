@@ -2,8 +2,8 @@
 
 |switch|value|
 |---|---|
-|`-o`|<output_file>|
-|`-n`| <number of records to generate>|
+|`-o`|output_file|
+|`-n`|number of records to generate|
 
 ### Building the application
 ```#bash
