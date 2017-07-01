@@ -17,6 +17,9 @@ public class Main {
     @Parameter(names = {"-n"}, required = true)
     private int numberOfLogs = 0;
 
+    @Parameter(names = {"-o"}, required = true)
+    private String outputFile;
+
 
     public static void main(String... args) {
         Main main = new Main();
@@ -43,7 +46,7 @@ public class Main {
         LocalDateTime localDateTime = LocalDateTime.now();
 
         ThreadLocalRandom rand = ThreadLocalRandom.current();
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("tmp/input.txt"))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))) {
             for (int x = 0; x < numberOfLogs; x++) {
                 String record;
                 int temperature = rand.nextInt(-36,36); //celsius
